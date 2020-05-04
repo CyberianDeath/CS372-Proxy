@@ -14,13 +14,13 @@ bool ProxyHuman::QuestionCheck() const{
     }
 }
 int ProxyHuman::QuestionMessage() const{
-    std::cout << "The Question has been asked, expect a reply shortly...\n..." << std::endl
+    std::cout << "The Question has been asked through a proxy, expect a reply shortly...\n..." << std::endl
 }
 ProxyHuman::Proxy(ActualHuman *actual_human): _actualhuman_(new ActualHuman(*actual_human)){
 }
 
 ProxyHuman::~ProxyHuman(){
-    delete actual_human;
+    delete _actualhuman_;
 }
 
 void ProxyHuman::Question() const override {

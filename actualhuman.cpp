@@ -6,3 +6,6 @@
 
 #include "human.hpp"
 
+void ActualHuman::Question() const override{
+    std::cout << "You have touched the real human..." << std::endl;
+}

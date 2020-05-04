@@ -5,3 +5,17 @@
 //
 // Main
 
+void cleanup(){
+    delete _actualhuman_;
+    delete proxy
+}
+
+
+int main() {
+    RealSubject *real_subject = new RealSubject;
+    ClientCode(*real_subject);
+    Proxy *proxy = new Proxy(real_subject);
+    ClientCode(*proxy);
+
+    return 0;
+}
