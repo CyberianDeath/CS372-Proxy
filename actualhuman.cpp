@@ -4,7 +4,8 @@
 // Example Code for Proxy Design Pattern
 //
 
-#include "human.hpp"
+#include "actualhuman.hpp"
+#include <iostream>
 
 void ActualHuman::Question() const override{
     std::cout << "You have touched the real human..." << std::endl;

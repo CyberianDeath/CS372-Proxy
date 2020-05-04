@@ -4,6 +4,6 @@
 // Example Code for Proxy Design Pattern
 //
 
-#include "human.hpp"
+#include "human.h"
 
 //Will remain empty

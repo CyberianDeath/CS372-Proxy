@@ -5,6 +5,7 @@
 //
 
 #include "proxyhuman.hpp"
+#include <iostream>
 
 bool ProxyHuman::QuestionCheck() const{
     if(true){ //pseudo code
@@ -13,11 +14,10 @@ bool ProxyHuman::QuestionCheck() const{
         return false; //unreachable state
     }
 }
-int ProxyHuman::QuestionMessage() const{
-    std::cout << "The Question has been asked through a proxy, expect a reply shortly...\n..." << std::endl
+void ProxyHuman::QuestionMessage() const{
+    std::cout << "This Question has been asked through a proxy\n..." << std::endl;
 }
-ProxyHuman::Proxy(ActualHuman *actual_human): _actualhuman_(new ActualHuman(*actual_human)){
-}
+ProxyHuman::ProxyHuman(ActualHuman *actual_human): _actualhuman_(new ActualHuman(*actual_human)){};
 
 ProxyHuman::~ProxyHuman(){
     delete _actualhuman_;

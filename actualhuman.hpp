@@ -6,7 +6,10 @@
 #ifndef FILE_ACTUALHUMAN_HPP_INCLUDED
 #define FILE_ACTUALHUMAN_HPP_INCLUDED
 
-class ActualHuman : public Human {
+#include "human.h"
+#include "actualhuman.hpp"
+
+class ActualHuman : public Human{
 public:
     void Question() const override;
 };

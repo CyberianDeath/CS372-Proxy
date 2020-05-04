@@ -6,7 +6,11 @@
 #ifndef FILE_PROXYHUMAN_HPP_INCLUDED
 #define FILE_PROXYHUMAN_HPP_INCLUDED
 
-class ProxyHuman : public Human {
+#include "human.h"
+#include "actualhuman.hpp"
+
+class ProxyHuman : public Human
+{
 private:
     ActualHuman *_actualhuman_;
     bool QuestionCheck() const;
@@ -14,7 +18,7 @@ private:
 public:
     void Question() const override;
     ProxyHuman() = delete;
-    Proxy(ActualHuman);
+    ProxyHuman(ActualHuman *actual_human);
     ~ProxyHuman();
 };
 

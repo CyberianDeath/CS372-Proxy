@@ -4,24 +4,25 @@
 // Example Code for Proxy Design Pattern
 //
 // Main
+#include <iostream>
+#include "human.h"
+#include "actualhuman.hpp"
+#include "proxyhuman.hpp"
 
-void cleanup(){
-    delete _actualhuman_;
-    delete proxy
-}
-
-void Client((const Human &human)){
+void Client(const Human &human){
     human.Question();
 }
 
 int main() {
-    std::cout << "Proxy method of question asking" << std:endl;
-    ProxyHuman *proxy = new Proxy(real_subject);
-    Client(*proxy);
-    std::cout << "Brunt force method of question asking with the actual human" << std:endl;
+    std::cout << "Brunt force method of question asking with the actual human" << std::endl;
     ActualHuman *actual_human = new ActualHuman;
     Client(*actual_human);
 
-    cleanup();
+    std::cout << "Proxy method of question asking" << std::endl;
+    ProxyHuman *proxy_human = new ProxyHuman(actual_human);
+    Client(*proxy_human);
+
+    delete actual_human;
+    delete proxy_human;
     return 0;
 }
