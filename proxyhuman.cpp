@@ -19,6 +19,13 @@ int ProxyHuman::QuestionMessage() const{
 ProxyHuman::Proxy(ActualHuman *actual_human): _actualhuman_(new ActualHuman(*actual_human)){
 }
 
-~ProxyHuman(){
+ProxyHuman::~ProxyHuman(){
     delete actual_human;
+}
+
+void ProxyHuman::Question() const override {
+    if (this->QuestionCheck()) {
+        this->_actualhuman_->Question() ;
+        this->QuestionMessage();
+    }
 }

@@ -12,6 +12,8 @@ private:
     bool QuestionCheck() const;
     void QuestionMessage() const;
 public:
+    void Question() const override;
+    ProxyHuman() = delete;
     Proxy(ActualHuman);
     ~ProxyHuman();
 };
