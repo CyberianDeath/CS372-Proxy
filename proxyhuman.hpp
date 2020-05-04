@@ -9,10 +9,9 @@
 #include "human.h"
 #include "actualhuman.hpp"
 
-class ProxyHuman : public Human
-{
+class ProxyHuman : public Human {
 private:
-    ActualHuman *_actualhuman_;
+    ActualHuman *actual_human;
     bool QuestionCheck() const;
     void QuestionMessage() const;
 public:

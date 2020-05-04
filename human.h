@@ -7,8 +7,8 @@
 #define FILE_HUMAN_H_INCLUDED
 
 class Human {
-    public:
-        virtual void Question() const = 0;
+public:
+    virtual void Question() const = 0;
 };
 
 #endif
