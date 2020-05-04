@@ -10,12 +10,18 @@ void cleanup(){
     delete proxy
 }
 
+void Client((const Human &human)){
+    human.Question();
+}
 
 int main() {
-    RealSubject *real_subject = new RealSubject;
-    ClientCode(*real_subject);
-    Proxy *proxy = new Proxy(real_subject);
-    ClientCode(*proxy);
+    std::cout << "Proxy method of question asking" << std:endl;
+    ProxyHuman *proxy = new Proxy(real_subject);
+    Client(*proxy);
+    std::cout << "Brunt force method of question asking with the actual human" << std:endl;
+    ActualHuman *actual_human = new ActualHuman;
+    Client(*actual_human);
 
+    cleanup();
     return 0;
 }
