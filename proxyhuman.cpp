@@ -6,15 +6,19 @@
 
 #include "proxyhuman.hpp"
 
-bool ProxyHuman::CheckAccess() const{
-
+bool ProxyHuman::QuestionCheck() const{
+    if(true){ //pseudo code
+        return true;
+    }else{
+        return false; //unreachable state
+    }
 }
-int ProxyHuman::AccessNumber() const{
-
+int ProxyHuman::QuestionMessage() const{
+    std::cout << "The Question has been asked, expect a reply shortly...\n..." << std::endl
 }
-ProxyHuman::Proxy(ActualHuman actual_human){
-
+ProxyHuman::Proxy(ActualHuman *actual_human): _actualhuman_(new ActualHuman(*actual_human)){
 }
+
 ~ProxyHuman(){
     delete actual_human;
 }

@@ -8,9 +8,9 @@
 
 class ProxyHuman : public Human {
 private:
-    ActualHuman *actual_human;
-    bool CheckAccess() const;
-    void AccessNumber() const;
+    ActualHuman *_actualhuman_;
+    bool QuestionCheck() const;
+    void QuestionMessage() const;
 public:
     Proxy(ActualHuman);
     ~ProxyHuman();
