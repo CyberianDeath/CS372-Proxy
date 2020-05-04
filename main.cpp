@@ -4,3 +4,4 @@
 // Example Code for Proxy Design Pattern
 //
 // Main
+

@@ -6,9 +6,9 @@
 #ifndef FILE_HUMAN_HPP_INCLUDED
 #define FILE_HUMAN_HPP_INCLUDED
 
-class Human {
+class ActualHuman : public Human {
 public:
-    virtual void Question() const = 0;
+    void Question() const override;
 };
 
 #endif
